@@ -12,6 +12,7 @@ function InfoTable() {
                     <th scope="col">Arrivée</th>
                     <th scope="col">Offre</th>
                     <th scope="col">Frais</th>
+                    <th scope="col">Reservation</th>
                 </tr>
                 </thead>
                 <tbody>
