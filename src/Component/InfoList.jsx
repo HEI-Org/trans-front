@@ -10,6 +10,9 @@ export default function InfoList() {
                 <DropDown/>
             </td>
             <td>1000</td>
+            <td>
+                <button className='btn btn-primary'>Reserver</button>
+            </td>
         </tr>
     )
 }
