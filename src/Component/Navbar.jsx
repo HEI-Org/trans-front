@@ -1,7 +1,14 @@
+import {BiBusSchool} from 'react-icons/bi';
+import Modal from './ReserverModal';
+import { useState } from 'react';
+
 function Navbar() {
+    const [show,setShow] = useState(false);
+    const closeModalHandler = ()=> setShow(false);
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-            <a className="navbar-brand" href="#">TokyTrans</a>
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light">          
+            <BiBusSchool className='navbar-brand'/>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -16,9 +23,16 @@ function Navbar() {
                     <li className="nav-item">
                         <a className="nav-link" href="#">Offre</a>
                     </li>
-
+                    <a className='center'>TOKYTRANS</a>
                 </ul>
-                <button className='btn btn-warning text-dark font-weight-bold mr-2'>Reserver</button>
+                <button className='btn btn-warning text-dark font-weight-bold mr-2' onClick={()=>setShow(true)}>Reserver</button>
+                <div>
+                {
+                  show ?  <div onClick={closeModalHandler} className="modal-drop"></div> : null
+                }
+              <Modal show={show} closeModalHandler={closeModalHandler}/>
+
+              </div>
                 <form className="form-inline my-2 my-lg-0">
                     <input className="form-control mr-sm-2" type="search" placeholder="Entrer une ville"
                            aria-label="Search"/>
