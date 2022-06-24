@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+:root {
+    --orange-prc: #f5a757;
+}
+.navbar-brand{
+    font-size: x-large;
+    width: 102px;
+    height: 92px;
+    cursor: pointer;
+}
+.nav-link{
+    font-size: x-large;
+    text-emphasis: none;
+}
+.center{
+    text-align: center;
+    align-items:center ;
+    justify-content: center;
+    margin-left: 100%;
+    text-decoration: none;
+    color: #f5a757;
+    font-size: 40px;
+    cursor: none;
+}
+.center:hover{
+    transition: .8s;
+    animation: show 2s alternate;
+    text-decoration: none;
+}
+@keyframes show {
+    from{
+        transform: scale(5);
+    }
+    to{
+        transform: scaleY(0);
+    }
+}

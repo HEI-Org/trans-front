@@ -1,0 +1,9 @@
+h3{
+    color: #f5a757;
+    border: 2px solid black;
+    padding-left: 40%;
+    background-color: black;
+}
+.table{
+    box-shadow: .5px .5px 2.5px .6px rgb(110, 102, 102);
+}
